@@ -1,14 +1,14 @@
 [[redirects]]
-from = "/admin/*"
-to = "adminhome"
-status = 200
+ from ="/*"
+ to = "adminhome"
+ status =200
 
-[[redirects]]
-from = "/student/*"
-to = "studenthome"
-status = 200
+ [[redirects]]
+ from ="/*"
+ to = "studenthome"
+ status =200
 
-[[redirects]]
-from = "/counsellor/*"
-to = "counsellorhome"
-status = 200
+ [[redirects]]
+ from ="/*"
+ to = "counsellorhome"
+ status =200
