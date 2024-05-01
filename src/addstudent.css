@@ -1,0 +1,151 @@
+/* Container styling */
+.mpcontent {
+    width: 400px;
+    height: auto;
+    max-height: 500px; /* Adding maximum height to allow for vertical scrolling if needed */
+    border: 2px solid #e0e0e0; /* Light gray border */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    margin: 0 auto; /* Center the container horizontally */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Heading styling */
+.mpcontent h2 {
+    color: #333333; /* Dark gray color */
+    font-size: 24px; /* Larger font size */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; /* Increased bottom margin for separation */
+    text-transform: uppercase; /* Uppercase text */
+}
+
+/* Input field styling */
+.add-student-container input[type="text"],
+.add-student-container input[type="password"],
+.add-student-container input[type="email"],
+.add-student-container select,
+.add-student-container input[type="date"],
+.add-student-container input[type="tel"],
+.add-student-container input[type="number"] {
+    width: calc(100% - 40px); /* Full width with padding accounted for */
+    height: 40px; /* Set height for consistency */
+    margin-bottom: 20px; /* Spacing between input fields */
+    padding: 0 10px; /* Padding for text input */
+    border: 1px solid #cccccc; /* Light gray border */
+    border-radius: 5px;
+    font-size: 16px; /* Normal font size */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Input field focus effect */
+.add-student-container input[type="text"]:focus,
+.add-student-container input[type="password"]:focus,
+.add-student-container input[type="email"]:focus,
+.add-student-container select:focus,
+.add-student-container input[type="date"]:focus,
+.add-student-container input[type="tel"]:focus,
+.add-student-container input[type="number"]:focus {
+    border-color: #01bcd5; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow on focus */
+}
+
+/* Input field error animation */
+.add-student-container input[type="text"].error,
+.add-student-container input[type="password"].error,
+.add-student-container input[type="email"].error,
+.add-student-container select.error,
+.add-student-container input[type="date"].error,
+.add-student-container input[type="tel"].error,
+.add-student-container input[type="number"].error {
+    border-color: #ff0000; /* Red border for error */
+    animation: shake 0.3s ease forwards; /* Shake animation on error */
+}
+
+/* Button styling */
+button[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background-color: #01bcd5; /* Blue button color */
+    color: #ffffff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Button hover effect */
+button[type="submit"]:hover {
+    background-color: #28e6ff; /* Darker blue on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Error message styling */
+.error-message {
+    color: #ff0000; /* Red color for error messages */
+    font-size: 14px;
+    margin-top: 5px; /* Spacing from input fields */
+}
+
+/* Success message styling */
+.success-message {
+    color: #008000; /* Green color for success messages */
+    font-size: 14px;
+    margin-top: 5px; /* Spacing from input fields */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Shake animation for error */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+/* Hide the scrollbar */
+.mpcontent::-webkit-scrollbar {
+    width: 0; /* Set the width of the scrollbar to 0 */
+}
+
+/* Optional: You can also style the track and thumb if needed */
+.mpcontent::-webkit-scrollbar-track {
+    background: transparent; /* Set the background color of the track */
+}
+
+.mpcontent::-webkit-scrollbar-thumb {
+    background: transparent; /* Set the background color of the thumb */
+}
+
+.back-button {
+    background-color: #36aef4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .back-button:hover {
+    background-color: #130dcb;
+  }
+  

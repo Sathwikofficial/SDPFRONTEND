@@ -1,0 +1,251 @@
+/* Reset and General Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 9pt;
+}
+
+/* Full Height Container */
+.full-height {
+  width: 100%;
+  height: 100%;
+}
+
+/* Login Page Styles */
+.loginheader {
+  background-color: #01bcd5;
+  height: 35px;
+  color: #333333;
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+.logincontent {
+  position: relative; /* Set position to relative to position the overlay */
+  height: calc(100% - 65px);
+}
+
+.logincontent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/loginbg1.jpg');
+  background-size: cover;
+  opacity: 0.8; /* Adjust opacity as needed (0 is fully transparent, 1 is fully opaque) */
+}
+
+
+
+.loginfooter {
+  background-color: #01bcd5;
+  height: 30px;
+  color: black;
+  line-height: 30px;
+  font-size: 8pt;
+  font-weight: bold;
+  text-align: center;
+}
+
+.popup {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.popupwindow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+
+
+  
+}
+.aboutpopupwindow {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.contactpopupwindow {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Login Styles */
+.loginstyle1 {
+  height: 30px;
+  line-height: 30px;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+
+.loginstyle2 {
+  position: relative;
+  height: 400px;
+  padding: 8px;
+  background: #fffdfe;
+}
+
+.loginstyle4 { 
+  position: relative;
+  height: 180px;
+  padding: 10px;
+  background: #ffffff;
+  font-style: italic;
+  font-size: 13px;
+}
+.loginstyle3 {
+  position: relative;
+  height: 450px;
+  padding: 10px;
+  background: #ffffff;
+  font-style: italic;
+  font-size: 13px;
+}
+
+
+
+.txtbox {
+  width: 98%;
+  height: 30px;
+  font-size: 10pt;
+  border: 1px solid #3498db; /* Change border color to a shade of blue */
+  border-radius: 5px; /* Slightly increase border-radius for a softer look */
+  padding: 8px; /* Increase padding for better spacing */
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s; /* Add smooth transition for better user experience */
+
+  /* Add box shadow for a subtle lift */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* Add a subtle hover effect */
+  &:hover {
+    border-color: #2ecc71; /* Change border color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
+  }
+
+  /* Add focus styles */
+  &:focus {
+    outline: none;
+    border-color: #e74c3c; /* Change border color on focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(231, 76, 60, 0.3); /* Add a thicker box shadow on focus */
+  }
+}
+
+/* Button Styles */
+.btn {
+  width: 100%;
+  height: 35px;
+  background-color: #01bcd5;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #0198af; /* Change to a slightly darker shade on hover */
+  transform: scale(1.05); /* Add a slight scale effect on hover */
+}
+.btn1 {
+  width: 5%;
+  height: 35px;
+  background-color: #01bcd5;
+  color: black;
+  cursor: pointer;
+  margin: auto; /* Center horizontally */
+  user-select: none;
+  
+}
+
+.btn2 {
+  width: 6%;
+  height: 30px;
+  background-color: #01bcd5;
+  color: black;
+  cursor: pointer;
+  margin: auto; /* Center horizontally */
+  user-select: none;
+  
+}
+
+.btn1:hover {
+  text-decoration: underline; /* Underline on hover for btn1 */
+}
+
+.btn2:hover {
+  text-decoration: underline; /* Underline on hover for btn2 */
+}
+
+/* Add this to your stylesheet or inline styles */
+.contact-columns {
+  display: flex;
+  gap: 20px; /* Adjust this value based on the desired space between columns */
+}
+
+.column {
+  flex: 1;
+  max-width: 50%;
+}
+
+.contact-row {
+  border-bottom: 1px solid #ddd; /* Line between rows */
+  padding-bottom: 10px; /* Adjust as needed */
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+.column-divider {
+  width: 1px;
+  background-color: #ddd; /* Color of the column divider */
+  margin: 0 10px; /* Adjust margin as needed */
+}
+
+/* Animation Styles */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    
+  }
+  to {
+    opacity: 1;
+    
+  }
+}
+
+/* Apply Animation to Popup Windows */
+.popupwindow,
+.aboutpopupwindow,
+.contactpopupwindow {
+  animation: slideDown 0.8s ease-in-out;
+}
+
+.custom-recaptcha {
+  /* Add your custom styles here */
+  width: 5000px; /* Adjust the width as needed */
+  height: 70px; /* Adjust the height as needed */
+  /* Add any other styles you want */
+}
+
+.linklabel{
+  color: dodgerblue;
+  cursor: pointer;
+}

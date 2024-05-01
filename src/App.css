@@ -1,0 +1,88 @@
+/* App.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main container */
+.MainContainer {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    max-width: 700px;
+    max-height: 800px;
+    overflow: hidden;
+}
+
+/* Chat container */
+.ChatContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Message list */
+.MessageList {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f0f0f0;
+}
+
+/* Message */
+.Message {
+    margin-bottom: 10px;
+}
+
+.Message--incoming {
+    align-items: flex-start;
+}
+
+.Message--outgoing {
+    align-items: flex-end;
+}
+
+.Message .Message__content {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.Message--incoming .Message__content {
+    background-color: #e0e0e0;
+}
+
+.Message--outgoing .Message__content {
+    background-color: #d0e9ff;
+}
+
+/* Typing indicator */
+.TypingIndicator {
+    padding: 10px;
+    color: #888;
+}
+
+/* Message input */
+.MessageInput {
+    border-top: 1px solid #e0e0e0;
+    padding: 10px;
+}
+
+.MessageInput__input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

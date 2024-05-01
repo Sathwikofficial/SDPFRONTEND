@@ -1,0 +1,49 @@
+.assign-counsellor-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50%;
+    border: 2px solid #e0e0e0; /* Light gray border */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .assign-counsellor-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .assign-counsellor-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .assign-counsellor-container select,
+  .assign-counsellor-container button {
+    margin-top: 10px;
+  }
+  
+  .assign-counsellor-container select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #b01414;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .assign-counsellor-container button {
+    padding: 10px 20px;
+    background-color: #1acade;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .assign-counsellor-container button:hover {
+    background-color: #118991;
+  }
+  

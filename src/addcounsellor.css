@@ -1,0 +1,99 @@
+/* Container styling */
+.accontent {
+    width: 400px;
+    height: auto;
+    max-height: 500px; /* Adding maximum height to allow for vertical scrolling if needed */
+    border: 2px solid #e0e0e0; /* Light gray border */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    margin: 0 auto; /* Center the container horizontally */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+/* Heading styling */
+.accontent h2 {
+    color: #333333; /* Dark gray color */
+    font-size: 24px; /* Larger font size */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; /* Increased bottom margin for separation */
+    text-transform: uppercase; /* Uppercase text */
+}
+
+/* Input field styling */
+/* AddCounsellor component specific styles */
+
+.add-counsellor-container input[type="text"],
+.add-counsellor-container input[type="password"],
+.add-counsellor-container input[type="email"],
+.add-counsellor-container select,
+.add-counsellor-container input[type="date"],
+.add-counsellor-container input[type="tel"],
+.add-counsellor-container input[type="number"] {
+    width: calc(100% - 40px); /* Full width with padding accounted for */
+    height: 40px; /* Set height for consistency */
+    margin-bottom: 20px; /* Spacing between input fields */
+    padding: 0 10px; /* Padding for text input */
+    border: 1px solid #cccccc; /* Light gray border */
+    border-radius: 5px;
+    font-size: 16px; /* Normal font size */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Input field focus effect */
+.add-counsellor-container input[type="text"]:focus,
+.add-counsellor-container input[type="password"]:focus,
+.add-counsellor-container input[type="email"]:focus,
+.add-counsellor-container select:focus,
+.add-counsellor-container input[type="date"]:focus,
+.add-counsellor-container input[type="tel"]:focus,
+.add-counsellor-container input[type="number"]:focus {
+    border-color: #01bcd5; /* Blue border on focus */
+}
+/* Hide the scrollbar */
+.accontent::-webkit-scrollbar {
+    width: 0; /* Set the width of the scrollbar to 0 */
+}
+
+/* Optional: You can also style the track and thumb if needed */
+.accontent::-webkit-scrollbar-track {
+    background: transparent; /* Set the background color of the track */
+}
+
+.accontent::-webkit-scrollbar-thumb {
+    background: transparent; /* Set the background color of the thumb */
+}
+
+/* Button styling */
+button[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background-color: #01bcd5; /* Blue button color */
+    color: #ffffff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Button hover effect */
+button[type="submit"]:hover {
+    background-color: #28e6ff;; /* Darker green on hover */
+}
+
+/* Error message styling */
+.error-message {
+    color: #ff0000; /* Red color for error messages */
+    font-size: 14px;
+    margin-top: 5px; /* Spacing from input fields */
+}
+
+/* Success message styling */
+.success-message {
+    color: #008000; /* Green color for success messages */
+    font-size: 14px;
+    margin-top: 5px; /* Spacing from input fields */
+}

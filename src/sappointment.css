@@ -1,0 +1,64 @@
+/* Container styles */
+.appointment-container {
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 400px; /* Set width of the container */
+    margin: 20px auto; /* Center the container */
+}
+
+/* Form field styles */
+.appointment-form input,
+.appointment-form textarea {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px; /* Padding inside the fields */
+    margin-bottom: 10px; /* Margin below each field */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Focus effect for form fields */
+.appointment-form input:focus,
+.appointment-form textarea:focus {
+    border-color: #4CAF50; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button styles */
+.appointment-form button {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #25bcd0; /* Green background */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold; /* Bold text */
+}
+
+.appointment-form button:hover {
+    background-color: #1c91a1; /* Darker green on hover */
+}
+
+
+/* CSS class for booking error message */
+.error {
+    color: red;
+    animation: shake 0.5s;
+}
+
+.loading{
+
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    color: red;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}

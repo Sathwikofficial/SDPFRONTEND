@@ -1,0 +1,80 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container Styles */
+.main-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Styles */
+.appointment-header {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #25bcd0;
+}
+
+/* Appointment Table Styles */
+.appointment-table {
+    width: 100%;
+    border-collapse: separate;
+    margin-bottom: 20px;
+    border-spacing: 0;
+}
+
+.appointment-table th, .appointment-table td {
+    padding: 16px; /* Increased padding for larger boxes */
+    border-bottom: 1px solid #d9d9d9;
+    text-align: left;
+    line-height: 1.5; /* Adjusted line height for readability */
+}
+
+.appointment-table th {
+    background-color: #25bcd0;
+    color: #ffffff;
+    border-top-left-radius: 8px; /* Rounded top left corner */
+    border-top-right-radius: 8px; /* Rounded top right corner */
+}
+
+.appointment-table tr:hover {
+    background-color: #f1f7fa;
+    cursor: pointer; /* Adds a cursor change on hover */
+}
+
+.appointment-table tr {
+    transition: background-color 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+/* Error and Loading Messages */
+.error-message, .loading-message {
+    text-align: center;
+    font-size: 18px;
+    color: #d9534f; /* Red color for error */
+}
+
+
+
+/* Fade-in Animation */
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-animation {
+    animation: fadeInAnimation 0.7s ease-in-out;
+}

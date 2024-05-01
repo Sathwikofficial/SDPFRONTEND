@@ -1,0 +1,111 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #0598fa, #01bcd5);
+    color: #fff;
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    z-index: -1;
+    animation: flowBorder 5s infinite alternate linear;
+}
+
+@keyframes flowBorder {
+    0% {
+        border: 5px solid rgb(11, 8, 8); /* Red */
+    }
+    25% {
+        border: 5px solid rgb(0, 255, 0); /* Green */
+    }
+    50% {
+        border: 5px solid rgb(0, 0, 255); /* Blue */
+    }
+    75% {
+        border: 5px solid rgb(255, 255, 0); /* Yellow */
+    }
+    100% {
+        border: 5px solid rgb(4, 109, 114); /* Back to Red */
+    }
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profile-table th, .profile-table td {
+    padding: 15px;
+    border: 1px solid transparent;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.profile-table th {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.profile-table td {
+    border-radius: 5px;
+}
+
+.profile-table tr:hover td {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.profile-table tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.profile-table th, .profile-table td {
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-table th:hover, .profile-table td:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.profile-table th::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.profile-table th:hover::after {
+    width: 100%;
+}

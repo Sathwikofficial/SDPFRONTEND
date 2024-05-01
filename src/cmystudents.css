@@ -1,0 +1,78 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8; /* Same as previous */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container Styles */
+.cmystudent-main-container {
+    width: 95%; /* Consistent with the previous style */
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px; /* Matching the previous style */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Matching the previous style */
+}
+
+/* Header Styles */
+.cmystudent-appointment-header {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #25bcd0; /* Matching the header color */
+}
+
+/* Appointment Table Styles */
+.cmystudent-appointment-table {
+    width: 100%; /* Consistent with the previous style */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-spacing: 0;
+}
+
+.cmystudent-appointment-table th, .cmystudent-appointment-table td {
+    padding: 12px; /* Matching padding with the previous snippet */
+    border: 1px solid #dbdbdb; /* Matching the previous snippet */
+    border-bottom: 1px solid #888787; /* Matching the previous snippet */
+    text-align: left;
+    line-height: 1.5;
+}
+
+.cmystudent-appointment-table th {
+    background-color: #25bcd0; /* Matching the header color */
+    color: #ffffff; /* Matching the previous snippet */
+}
+
+.cmystudent-appointment-table tr:nth-child(even) {
+    background-color: whitesmoke; /* Matching the previous snippet */
+}
+
+.cmystudent-appointment-table tr:hover {
+    background-color: #f5f5f9; /* Matching the hover color */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Matching the previous snippet */
+}
+
+/* Error and Loading Messages */
+.cmystudent-error-message, .cmystudent-loading-message {
+    text-align: center;
+    font-size: 18px;
+    color: #d9534f; /* Matching the red color */
+}
+
+/* Fade-in Animation */
+@keyframes cmystudent-fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.cmystudent-fade-in-animation {
+    animation: cmystudent-fadeInAnimation 0.7s ease-in-out; /* Consistent timing with the previous snippet */
+}
