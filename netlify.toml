@@ -1,0 +1,14 @@
+[[redirects]]
+from = "/admin/*"
+to = "adminhome"
+status = 200
+
+[[redirects]]
+from = "/student/*"
+to = "studenthome"
+status = 200
+
+[[redirects]]
+from = "/counsellor/*"
+to = "counsellorhome"
+status = 200
