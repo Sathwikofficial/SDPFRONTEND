@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import logo from './images/logo.png';
 import lockIcon from './images/lock.jpg';
-import ReCAPTCHA from "react-google-recaptcha";
 import { callApi, setSession } from './main';
 import eyeOpen from './images/openeye.png';
 import eyeClosed from './images/closedeye.jpg';
@@ -59,20 +58,16 @@ const space = {
 const eyeicon= {
   width: '18px',
   height: '17px',
-  bordor : 'none',
+  border: 'none',
   outline: 'none',
   background: 'white',
   position: 'absolute',
-   right: '22px', 
-   top: '46%', 
-   transform: 'translateY(-50%)'
+  right: '22px',
+  top: '46%',
+  transform: 'translateY(-50%)'
 };
 
 function Login() {
-  const [isCaptchaVerified, setCaptchaVerified] = useState(false);
-  const [captchaError, setCaptchaError] = useState(false);
-  // const onChange = () => {};
-
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [isAboutUsPopupVisible, setAboutUsPopupVisible] = useState(false);
   const [isContactUsPopupVisible, setContactUsPopupVisible] = useState(false);
@@ -83,7 +78,7 @@ function Login() {
     const handleDocumentClick = (event) => {
       if (isPopupVisible && !document.getElementById('popupwindow').contains(event.target)) {
         setPopupVisible(false);
-        window.location.reload();
+        
       }
       if (isAboutUsPopupVisible && !document.getElementById('aboutUsPopupWindow').contains(event.target)) {
         setAboutUsPopupVisible(false);
@@ -100,12 +95,6 @@ function Login() {
     };
   }, [isPopupVisible, isAboutUsPopupVisible, isContactUsPopupVisible]);
 
-  const handleCaptchaVerification = () => {
-    setCaptchaVerified(true);
-    // Reset captcha error if user successfully completes reCAPTCHA
-    setCaptchaError(false);
-  };
-
   const handleLoginClick = () => {
     setPopupVisible(true);
     setLoginError(false);
@@ -120,11 +109,6 @@ function Login() {
   };
 
   const handleLogin = async () => {
-    if (!isCaptchaVerified) {
-      // Display error message or prevent login process
-      setCaptchaError(true);
-      return;
-    }
     const username = document.getElementById('T1').value;
     const password = document.getElementById('T2').value;
     const adminUsername = 'admin';
@@ -194,10 +178,12 @@ function Login() {
           <span>Login</span>
           <img src={lockIcon} alt='' style={{ marginLeft: '1px', height: '14px' }} />
         </div>
-        <div className='btn2' style={{ float: 'right', paddingRight: '150px', marginTop: '-35px' }} onClick={handleAboutUsClick}>
+        <div class='btn2' style={{ float: 'right', paddingRight: '150px', marginTop: '-35px' }} onClick={handleAboutUsClick}>
           About Us
         </div>
-        <div className='btn2' style={{ float: 'right', paddingRight: '30px', marginTop: '-35px' }} onClick={handleContactUsClick}> Contact Us</div>
+        <div class='btn2' style={{ float: 'right', paddingRight: '30px', marginTop: '-35px' }} onClick={handleContactUsClick}>
+          Contact Us
+        </div>
       </div>
       <div id='content' className='logincontent'>
         {isPopupVisible && (
@@ -215,10 +201,8 @@ function Login() {
                 <div style={space}></div>
                 <div>Password*</div>
                 <div>
-               <input 
-                 type={showPassword ? 'text' : 'password'} id='T2' className='txtbox' style={{ paddingRight: '40px' }} 
-                  />
-                  <img style={eyeicon}  onClick={togglePasswordVisibility}  src={showPassword ? eyeClosed : eyeOpen} alt={showPassword ? 'Hide' : 'Show'} /> 
+                  <input type={showPassword ? 'text' : 'password'} id='T2' className='txtbox' style={{ paddingRight: '40px' }} />
+                  <img style={eyeicon} onClick={togglePasswordVisibility} src={showPassword ? eyeClosed : eyeOpen} alt={showPassword ? 'Hide' : 'Show'} />
                 </div>
                 <div style={space}></div>
                 {loginError && (
@@ -227,14 +211,9 @@ function Login() {
                   </div>
                 )}
                 <div style={space}></div>
-                <div>
-                  <ReCAPTCHA sitekey="6Le_L2EpAAAAAO4l95O7jHSxB4JcgOv8OD94cjQA" onChange={handleCaptchaVerification} style={{ transform: 'scale(0.9)', marginLeft: '-10px' }} />
-                  {captchaError && (
-                  <div style={{ color: 'red', textAlign: 'center' }}>  Please complete the reCAPTCHA verification. </div>)}
-                  <button className='btn' onClick={handleLogin}>Sign In</button>
-                  <div style={space}></div>
-                 <label className='linklabel' >Forgot Password?</label>
-                </div>
+                <button className='btn' onClick={handleLogin}>Sign In</button>
+                <div style={space}></div>
+                <label className='linklabel'>Forgot Password?</label>
               </div>
             </div>
           </div>
